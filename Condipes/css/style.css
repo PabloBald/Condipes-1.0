@@ -1,0 +1,157 @@
+body{
+    margin:0;
+    
+    background-image: url('../img/fondo.png');
+    background-color: #cccccc;
+    background-attachment: fixed;
+    height: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1{
+    -webkit-text-stroke: 2px black;
+    margin-top: 1vw;
+    margin-bottom: 0px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    font-size: 4vw;
+}
+h2{
+    -webkit-text-stroke: 1.3px black;
+    margin-top: 1vw;
+    color: white;
+    text-shadow: 0.5px 0.5px 3px white;
+    font-size: 1.5vw;
+}
+
+.atributos{
+    width: 29pt;
+    text-align: center;
+    
+}
+
+td,th{
+    
+    text-align: center;
+    
+    border-spacing: 2px;
+   
+}
+tr{
+    
+    border: 2px solid rgb(124, 123, 123);
+    border-radius: 5%;
+}
+
+table{
+    box-shadow: 1px 1px 5px 5px black;
+    border-radius: 5%;
+    margin-left: 9vw;
+    margin-top: 2.2vw;
+    width: 50%;
+    border-collapse: collapse;
+    background-color: black;
+    color: white;
+}
+
+    
+
+
+table td{
+    font-weight: bolder;
+    -webkit-text-stroke: 0.9px black;
+    width: 4vw;
+}
+
+table td+td{
+    background: rgb(13, 87, 41);
+    width: 4vw;
+}
+
+table td+td+td{
+    background-color: rgba(224, 59, 59, 0.589);
+    width: 4vw;
+}
+table td+td+td+td{
+    background-color: rgba(170, 170, 12, 0.781);
+    width: 4vw;
+}
+
+table td+td+td+td+td{
+    background-color: rgb(7, 99, 136);
+    width: 4vw;
+}
+
+table td+td+td+td+td+td{
+    border-bottom-right-radius: 10% ;
+    background-color: rgba(109, 82, 145, 0.671) ;
+    width: 4vw;
+    
+}
+
+table p{
+    margin-top: auto;
+    height: 0.5px;
+}
+
+button {
+    box-shadow: 1px 1px 5px 5px black;
+    margin-left: 18vw;
+    background-color: black;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 2px 1px rgba(148, 148, 148, 0.856);
+    font-size: 25pt;
+    border-radius: 3%;
+    height: 5.3vw;
+    width: 300px;
+    border: 0px;
+}
+
+button:focus {
+    
+        outline: 0;
+    }
+button:hover {
+    color: black;
+    background-color: white;
+    text-shadow: whitesmoke;
+}
+
+button:active {
+    color: black;
+    background-color: grey;
+    text-shadow: black;
+}
+#botoncinho{
+    position: absolute;
+    left: 50vw;
+    top: 25vw;
+    margin-bottom: 0px;
+}
+
+
+      
+tr:nth-last-child(2){
+    border: 0px;
+}
+tr:last-child{border:0px;}
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  
+}

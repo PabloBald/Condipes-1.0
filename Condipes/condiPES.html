@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+        <title> CondiPES by Pablo</title>
+    </head>
+    <body>
+
+        
+
+
+        
+        <h1>Bienvenidos a CondiPES!</h1>
+        <h2>Modo de uso: <br> Ingrese el valor en la casilla correspondiente (1-99). <br> Oprima el botón "Calcular!" </h2>
+        <div id="myDiv">
+            
+            <table id="tabla">
+                <thead>
+                <tr>
+                <th>Atributo</th>
+                <th><img src="img/condicionVerde.png" alt="Normal"></th>
+                <th><img src="img/condicionRojo.png" alt="Excelente"></th>
+                <th><img src="img/condicionAmarillo.png" alt="Buena"></th>
+                <th><img src="img/condicionAzul.png" alt="Mala"></th>
+                <th><img src="img/CondicionVioleta.png" alt="Muy mala"></th>
+                
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ataque</td>
+                    <td><input type="number" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" class="atributos" id="ataqueIn" ></td>
+                    <td><p id="atqR"></p></td>
+                    <td><p id="atqAm"></p></td>
+                    <td><p id="atqAz"></p></td>
+                    <td><p id="atqV"></p></td>
+                </tr>
+                <tr>
+                    <td>Defensa</td>
+                    <td><input type="number"  class="atributos" id="defensaIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="defR"></p></td>
+                    <td><p id="defAm"></p></td>
+                    <td><p id="defAz"></p></td>
+                    <td><p id="defV"></p></td>
+                </tr>
+                <tr>
+                    <td>Estabilidad</td>
+                    <td><input type="number"  class="atributos" id="estabilidadIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="estR"></p></td>
+                    <td><p id="estAm"></p></td>
+                    <td><p id="estAz"></p></td>
+                    <td><p id="estV"></p></td>
+                </tr>
+                <tr>
+                    <td>Resistencia</td>
+                    <td><input type="number"  class="atributos" id="resistenciaIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="resR"></p></td>
+                    <td><p id="resAm"></p></td>
+                    <td><p id="resAz"></p></td>
+                    <td><p id="resV"></p></td>
+                </tr>
+                <tr>
+                    <td>Vel. máxima</td>
+                    <td><input type="number"  class="atributos" id="velmaxIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="velmR"></p></td>
+                    <td><p id="velmAm"></p></td>
+                    <td><p id="velmAz"></p></td>
+                    <td><p id="velmV"></p></td>
+                </tr>
+                <tr>
+                    <td>Aceleración</td>
+                    <td><input type="number"  class="atributos" id="acelIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="acelR"></p></td>
+                    <td><p id="acelAm"></p></td>
+                    <td><p id="acelAz"></p></td>
+                    <td><p id="acelV"></p></td>
+                </tr>
+                <tr>
+                    <td>Respuesta</td>
+                    <td><input type="number"  class="atributos" id="respuestaIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="respR"></p></td>
+                    <td><p id="respAm"></p></td>
+                    <td><p id="respAz"></p></td>
+                    <td><p id="respV"></p></td>
+                </tr>
+                <tr>
+                    <td>Agilidad</td>
+                    <td><input type="number"  class="atributos" id="agilidadIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="agiR"></p></td>
+                    <td><p id="agiAm"></p></td>
+                    <td><p id="agiAz"></p></td>
+                    <td><p id="agiV"></p></td>
+                </tr>
+                <tr>
+                    <td>Prec. c.</td>
+                    <td><input type="number"  class="atributos" id="preccIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="preccR"></p></td>
+                    <td><p id="preccAm"></p></td>
+                    <td><p id="preccAz"></p></td>
+                    <td><p id="preccV"></p></td>
+                </tr>
+                <tr>
+                    <td>Vel. c.</td>
+                    <td><input type="number"  class="atributos" id="velcIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="velcR"></p></td>
+                    <td><p id="velcAm"></p></td>
+                    <td><p id="velcAz"></p></td>
+                    <td><p id="velcV"></p></td>
+                </tr>
+                <tr>
+                    <td>Prec. p. c.</td>
+                    <td><input type="number"  class="atributos" id="prepcIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="prepcR"></p></td>
+                    <td><p id="prepcAm"></p></td>
+                    <td><p id="prepcAz"></p></td>
+                    <td><p id="prepcV"></p></td>
+                </tr>
+                <tr>
+                    <td>Vel. p. c.</td>
+                    <td><input type="number"  class="atributos" id="velpcIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="velpcR"></p></td>
+                    <td><p id="velpcAm"></p></td>
+                    <td><p id="velpcAz"></p></td>
+                    <td><p id="velpcV"></p></td>
+                </tr>
+                <tr>
+                    <td>Prec. p. l.</td>
+                    <td><input type="number"  class="atributos" id="preplIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="preplR"></p></td>
+                    <td><p id="preplAm"></p></td>
+                    <td><p id="preplAz"></p></td>
+                    <td><p id="preplV"></p></td>
+                </tr>
+                <tr>
+                    <td>Vel. p. l.</td>
+                    <td><input type="number" max=99 class="atributos" id="velplIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="velplR"></p></td>
+                    <td><p id="velplAm"></p></td>
+                    <td><p id="velplAz"></p></td>
+                    <td><p id="velplV"></p></td>
+                </tr>
+                <tr>
+                    <td>Precisión en el tiro</td>
+                    <td><input type="number" max=99 class="atributos" id="prectirIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="prectirR"></p></td>
+                    <td><p id="prectirAm"></p></td>
+                    <td><p id="prectirAz"></p></td>
+                    <td><p id="prectirV"></p></td>
+                </tr>
+                <tr>
+                    <td>Potencia en el tiro</td>
+                    <td><input type="number" max=99 class="atributos" id="pottirIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="pottirR"></p></td>
+                    <td><p id="pottirAm"></p></td>
+                    <td><p id="pottirAz"></p></td>
+                    <td><p id="pottirV"></p></td>
+                </tr>
+                <tr>
+                    <td>Téc disp</td>
+                    <td><input type="number" max=99 class="atributos" id="tectirIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="tecdisR"></p></td>
+                    <td><p id="tecdisAm"></p></td>
+                    <td><p id="tecdisAz"></p></td>
+                    <td><p id="tecdisV"></p></td>
+                </tr>
+                <tr>
+                    <td>Prec. saq. falta</td>
+                    <td><input type="number" max=99 class="atributos" id="precsaqfalIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="precsfR"></p></td>
+                    <td><p id="precsfAm"></p></td>
+                    <td><p id="precsfAz"></p></td>
+                    <td><p id="precsfV"></p></td>
+                </tr>
+                <tr>
+                    <td>Efecto</td>
+                    <td><input type="number" max=99 class="atributos" id="efectoIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="efeR"></p></td>
+                    <td><p id="efeAm"></p></td>
+                    <td><p id="efeAz"></p></td>
+                    <td><p id="efeV"></p></td>
+                </tr>
+                <tr>
+                    <td>Cabezazo</td>
+                    <td><input type="number" max=99 class="atributos" id="cabezazoIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="cabR"></p></td>
+                    <td><p id="cabAm"></p></td>
+                    <td><p id="cabAz"></p></td>
+                    <td><p id="cabV"></p></td>
+                </tr>
+                <tr>
+                    <td>Salto</td>
+                    <td><input type="number" max=99 class="atributos" id="saltoIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="salR"></p></td>
+                    <td><p id="salAm"></p></td>
+                    <td><p id="salAz"></p></td>
+                    <td><p id="salV"></p></td>
+                </tr>
+                <tr>
+                    <td>Técnica</td>
+                    <td><input type="number" max=99 class="atributos" id="tecIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="tecR"></p></td>
+                    <td><p id="tecAm"></p></td>
+                    <td><p id="tecAz"></p></td>
+                    <td><p id="tecV"></p></td>
+                    
+                </tr>
+                <tr>
+                    <td>Agresividad</td>
+                    <td><input type="number" max=99 class="atributos" id="agresividadIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="agrR"></p></td>
+                    <td><p id="agrAm"></p></td>
+                    <td><p id="agrAz"></p></td>
+                    <td><p id="agrV"></p></td>
+                </tr>
+                <tr>
+                    <td>Mentalidad</td>
+                    <td><input type="number" max=99 class="atributos" id="mentalidadIn" onKeyDown="if(this.value.length==2 && event.keyCode!=8 && event.keyCode!=9) return false;" ></td>
+                    <td><p id="menR"></p></td>
+                    <td><p id="menAm"></p></td>
+                    <td><p id="menAz"></p></td>
+                    <td><p id="menV"></p></td>
+
+                    <tr><td style="background-color: transparent;"><div id="botoncinho"><button id="calc" onclick="calculo()" >Calcular!</button></div></td></tr>
+                </tr>
+            </tbody>
+            
+            </table>
+            
+        </div>
+        
+            
+            <div id="div2"></div>
+
+            <script src="js/script.js"></script>
+            
+           
+
+    </body>
+   
+</html>
